@@ -1,5 +1,7 @@
 package com.example.demopesangnv2.entity;
 
+import java.io.Serializable;
+
 public class Product {
     private String code;
     private String name;

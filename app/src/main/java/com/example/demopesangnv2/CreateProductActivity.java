@@ -1,5 +1,6 @@
 package com.example.demopesangnv2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,8 +54,8 @@ public class CreateProductActivity extends AppCompatActivity {
                     Product product = new Product(code, name, price, quantity);
                     dbHandler.insert(product);
 
-                    Toast.makeText(CreateProductActivity.this, "Product saved successfully", Toast.LENGTH_SHORT).show();
-                    finish(); // Return to MainActivity
+                    Intent intent = new Intent(CreateProductActivity.this, MainActivity.class);
+                    startActivity(intent);
                 } catch (NumberFormatException e) {
                     Toast.makeText(CreateProductActivity.this, "Invalid price or quantity", Toast.LENGTH_SHORT).show();
                 }

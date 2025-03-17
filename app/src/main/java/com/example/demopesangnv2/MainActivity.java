@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerViewProductList = findViewById(R.id.recyclerViewProductList);
         recyclerViewProductList.setLayoutManager(new LinearLayoutManager(this));
-        ProductAdapter productAdapter = new ProductAdapter(productList, this, dbHandler);
+        productAdapter = new ProductAdapter(productList, this, dbHandler);
+
         recyclerViewProductList.setAdapter(productAdapter);
 
         btAddNewProduct = findViewById(R.id.btAddNewProduct);

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import com.example.demopesangnv2.R;
@@ -45,10 +46,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     }
 
+
     @Override
     public int getItemCount() {
         return productList.size();
     }
+
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView tvProductCode;

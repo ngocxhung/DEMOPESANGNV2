@@ -56,7 +56,6 @@ public class DbHandler extends SQLiteOpenHelper {
     public void delete(String code) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
         sqLiteDatabase.delete("products", "code = ?", new String[]{code});
-        sqLiteDatabase.close();
     }
     public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();
